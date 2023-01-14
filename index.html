@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <meta name="viewport" content="width=device-width,initial-minimum=1.0,initial-maximum=3.0,initial-scale=1,user-scalable=yes">
+  <title>试卷练习</title>
+  <link rel="stylesheet/less" href="style.less">
+  <script src="less.min.js"></script>
+</head>
+
+<body>
+  <div class="wrap">
+    <header>
+      <div class="header-inner">
+        <span>(</span>
+        <span>答案</span>
+        <span>)</span>
+        <span>编辑</span>
+        <!--header为浮动窗口包含四个按钮-->
+        <div class="void">
+          <div class="setting"><span>设置</span>
+          <div class="setting-face">
+            
+            <fieldset class="setting-sort">
+              <legend>乱序设置</legend>
+             <h3>大题序号:<input type="checkbox"></h3>
+             <input type="text" class="Num"><input type="text" class="dot"><br>
+              <h3>小题序号:<input type="checkbox"></h3>
+              <input type="text" class="Num"><input type="text" class="dot"><br><br>
+             <div>答案:<input type="checkbox" class="keyBtn"></div>
+              <button class="save">保存设置</button>
+              
+            </fieldset>
+            <p>1.设置中的序号必须加英文逗号分割;<br>
+            2.尾部空格为序号结束符如:一、1.中的点;<br>
+            3.大小题选择框如果全部都不选变序按钮将隐藏<br>
+            4.答案按钮选择框控制答案按钮的显示隐藏<br>
+            5.此作品用时十天写的可能存在bug问题;<br>
+            6.作者微信:fy1302uc;
+            </p>
+            
+            
+          </div>
+          </div>
+  
+        </div>
+        <button class="paper">试题</button>
+        <button class="answer">答案</button>
+        <button class="random">变序</button>
+        <button class="submit">提交</button>
+      </div>
+    </header>
+    <section>
+
+      <div class="writeData">
+
+        <textarea name="" id="" cols="30" rows="10" placeholder="向此处文本框中粘贴试卷文本，文本中()包裹的内容为答案或点击左上角修改答案包裹符，点击编辑将重回本页编辑文本,点击设置将弹出设置界面控制变序及按钮显示;作者微信:fy1302uc"></textarea>
+        <!--试题内容采用innerHTML注入-->
+        <button>写入数据</button>
+      </div>
+      <div class="readData"></div>
+      <button class="submit">提交</button>
+    </section>
+
+  </div>
+
+
+  <script src="main.js"></script>
+</body>
+
+</html>
