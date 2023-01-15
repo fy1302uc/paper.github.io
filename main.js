@@ -19,6 +19,7 @@
       rander(readData, writeDataStorage);
       writeData.style.display = 'none'; //将输入文本框及输入按钮隐藏
       readBtn.style.display = 'inline-block'; //将末尾的提交按钮显示;
+      }
       editorWrite.addEventListener('click', () => { //弹出文本编辑框重新编辑文本
         writeDataStorage = localStorage.getItem('writeData');
         textarea.value = writeDataStorage;
@@ -27,7 +28,7 @@
         readData.innerHTML = ''; //将主页数据清空使其隐藏
         setFace.style.display = 'none'; //关闭设置界面
       })
-    }
+    
     writeBtn.addEventListener('click', filterText); //写入按钮被点击时载入处理数据并显示在页面上
     function filterText() { //将试卷文本处理后添加到页面中
       //判断文本是否符合要求
